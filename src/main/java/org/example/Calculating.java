@@ -1,3 +1,7 @@
+package org.example;
+
+import org.example.operations.*;
+
 public class Calculating {
     public static final int ERROR_no = 0;
     public static final int ERROR_not_sup = 1;
@@ -9,28 +13,28 @@ public class Calculating {
         return val;
     }
 
-    public int result(double a, double b, String actions){
-        if (actions.length() != 1){
+    public int result(double a, double b, String actions) {
+        if (actions.length() != 1) {
             return ERROR_not_sup;
         }
         MathOperations example;
-        switch (actions.charAt(0)){
+        switch (actions.charAt(0)) {
             case '+':
                 example = new Sum();
-                val = example.result(a,b);
+                val = example.result(a, b);
                 return ERROR_no;
             case '-':
                 example = new Subtract();
-                val = example.result(a,b);
+                val = example.result(a, b);
                 return ERROR_no;
             case '*':
                 example = new Multiply();
-                val = example.result(a,b);
+                val = example.result(a, b);
                 return ERROR_no;
             case '/':
                 example = new Divide();
-                val = example.result(a,b);
-                if (b == 0){
+                val = example.result(a, b);
+                if (b == 0) {
                     return ERROR_zero;
                 }
                 return ERROR_no;
@@ -38,8 +42,8 @@ public class Calculating {
         return ERROR_not_sup;
     }
 
-    public String getErrorText(int errorCode){
-        switch (errorCode){
+    public String getErrorText(int errorCode) {
+        switch (errorCode) {
             case ERROR_no -> {
                 return "";
             }

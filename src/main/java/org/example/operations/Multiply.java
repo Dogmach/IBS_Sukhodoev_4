@@ -1,3 +1,5 @@
+package org.example.operations;
+
 public class Multiply implements MathOperations {
 
     @Override

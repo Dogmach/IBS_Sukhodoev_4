@@ -1,9 +1,10 @@
+package org.example;
+
 import java.util.Scanner;
 
 public class Main {
 
-    public static void calculate(Calculating calc){
-        Calculator calculator = new Calculator();
+    public static void calculate(Calculating calc) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число: ");
         double a = scanner.nextDouble();
@@ -14,16 +15,16 @@ public class Main {
         String action = scanner.nextLine();
         action = scanner.nextLine();
 
-        int errorCode = calc.result(a,b,action);
+        int errorCode = calc.result(a, b, action);
 
-        if (errorCode == Calculating.ERROR_no){
-            System.out.printf("Ответ: " + a + " "+ action + " " +   b + " = %.4f", calc.getValue());
-        }
-        else {
+        if (errorCode == Calculating.ERROR_no) {
+            System.out.printf("Ответ: " + a + " " + action + " " + b + " = %.4f", calc.getValue());
+        } else {
             System.err.println("ОШИБКА: " + calc.getErrorText(errorCode));
         }
         scanner.close();
     }
+
     public static void main(String[] args) {
         Calculating calculating = new Calculating();
         calculate(calculating);

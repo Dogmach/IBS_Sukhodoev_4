@@ -1,3 +1,5 @@
+package org.example.operations;
+
 public class Subtract implements MathOperations {
 
     @Override
