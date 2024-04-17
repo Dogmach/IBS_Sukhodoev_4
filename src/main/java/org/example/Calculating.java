@@ -48,7 +48,7 @@ public class Calculating {
                 return "";
             }
             case ERROR_not_sup -> {
-                return "Необходимо ввести один из знаков: +, -, * или /.";
+                return "Необходимо ввести один из знаков: +, -, * или /";
             }
             case ERROR_zero -> {
                 return "Делить на ноль нельзя!";
